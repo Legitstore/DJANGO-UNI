@@ -1,0 +1,95 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <!-- ----- Main body  starts -----  -->
+<section class="sub-header">
+    <nav>
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <!-- <li><a href="{ url 'course' }">COURSE</a></li>
+                <li><a href="{ url 'blog' }">BLOG</a></li> -->
+                <li><a href="{% url 'online' %}">ADMISSION FORM</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Contact Us</h1>
+</section>
+<!-- ----- Main body ends -----  -->
+
+<!-- ----- Contact Us start -----  -->
+<section class="location">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8070159.415905151!2d4.179102987056781!3d9.017380040036894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48d0d%3A0x99a8fe4168c50bc8!2sNigeria!5e0!3m2!1sen!2sng!4v1674914714907!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+
+<section class="contant-us">
+
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fas fa-home"></i> 
+                <span>
+                <h5>16. Warri Sapele Road Muffy's Building</h5>
+                <p>Warri, Delta State, Nigeria</p>
+                </span>
+            </div>
+            <div>
+                <i class="fas fa-phone"></i> 
+                <span>
+                <h5>+234 (0) 7040953356</h5>
+                <p>Monday to Saturday, 9AM - 5PM</p>
+                </span>
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> 
+                <span>
+                <h5>muffydo@gmail.com</h5>
+                <p>Email us your query</p>
+                </span>
+            </div>
+        </div>
+
+
+<div class="contact-col">
+    <div class="card">
+        {% for msg in messages %}
+             {{msg}}
+        {% endfor %}
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter email address" required>
+        <input type="text" name="subject" placeholder="Enter your subject" required>
+        <textarea rows="8" name="message" placeholder="messagetext" required></textarea>
+        <button type="submit" class="hero-btn red-btn">Send Message</button>
+    </form>
+
+
+</div>
+</div>
+
+</section>
+<!-- ----- Contact Us ends  -----  -->
+
+   <!-- ----- Footer section starts ----- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS</p>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+    </div>
+    <p>Made with <i class="far fa-heart"></i> </p>
+</section>
+
+{% endblock %}

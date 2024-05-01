@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <!-- ----- Main body  starts -----  -->
+<section class="sub-header">
+    <nav>
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <!-- <li><a href="{ url 'course' }">COURSE</a></li>
+                <li><a href="{ url 'blog' }">BLOG</a></li> -->
+                <li><a href="{% url 'online' %}">ADMISSION FORM</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>About Us</h1>
+</section>
+<!-- ----- Main body ends -----  -->
+
+<!-- ----- About us content -----  -->
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>We are the world's largest university</h1>
+            <p>provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries. Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme. Save time in Word with new buttons that show up where you need them.</p>
+            <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+        </div>
+        <div class="about-col">
+            <img src="{% static 'images/about.jpg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- ----- About us content -----  -->
+
+   <!-- ----- Footer section starts ----- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS</p>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+    </div>
+    <p>Made with <i class="far fa-heart"></i> </p>
+</section>
+
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Brand</h1>
+        </div>
+        <ul>
+            <li><i class="fa fa-dashboard"></i>&nbsp; <span>Dashboard</span> </li>
+            <li><i class="fa fa-dashboard"></i>&nbsp; <span>Students</span></li>
+            <li><i class="fa fa-dashboard"></i>&nbsp; <span>Teachers</span></li>
+            <li><i class="fa fa-dashboard"></i>&nbsp; <span>Schools</span></li>
+            <li><i class="fa fa-dashboard"></i>&nbsp; <span>Income</span></li>
+            <li><i class="fa fa-dashboard"></i>&nbsp; <span>Help</span></li>
+            <li><i class="fa fa-dashboard"></i>&nbsp; <span>Settings</span></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="user">
+                    <a href="" class="btn">Add New User</a>
+                    <i class="fa fa-bell"></i>
+                    <div class="img-case">
+                        <img src="images/avatar2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Teachers</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-user-tie"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>5</h1>
+                        <h3>Schools</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-school"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>35,000</h1>
+                        <h3>Income</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-naira-sign"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Recent Payments</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <th>Name</th>
+                            <th>School</th>
+                            <th>Amount</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="new-students">
+                    <div class="title">
+                        <h2>New Students</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td><img src="images/avatar2.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <!-- <td><img src="images/avatar3.png" alt=""></td> -->
+                            <td><i class="fa fa-comment"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

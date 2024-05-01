@@ -1,0 +1,176 @@
+
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    
+
+<section class="header">
+    
+    <nav>
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <!-- <li><a href="{ url 'course' }">COURSE</a></li>
+                <li><a href="{ url 'blog' }">BLOG</a></li> -->
+                <li><a href="{% url 'online' %}">ADMISSION FORM</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>World's Biggest University</h1>
+        <p>Making website is ow one of the easiest thing in the world. You just needto learn HTML, CSS, <br>JavaScript andyou are good to go.</p>
+        <a href="" class="hero-btn">Visit Us To Know More</a>
+    </div>
+</section>
+<!-- ----- Main body ends -----  -->
+
+<!-- ----- Course  starts -----  -->
+<section class="course">
+    <h1>Courses We Offer</h1>
+    <p>You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Intermediate</h3>
+            <p>Making website is ow one of the easiest thing in the world. You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+        </div>
+
+        <div class="course-col">
+            <h3>Degree</h3>
+            <p>Making website is ow one of the easiest thing in the world. You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+        </div>
+
+        <div class="course-col">
+            <h3>Post Graduation</h3>
+            <p>Making website is ow one of the easiest thing in the world. You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+        </div>
+    </div>
+</section>
+<!-- ----- course  ends -----  -->
+
+<!-- ----- Campus starts -----  -->
+<section class="campus">
+    <h1>Our Global Campus</h1>
+    <p>You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="{% static 'images/london.png' %}" alt="">
+            <div class="layer">
+                <h3>LONDON</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="{% static 'images/newyork.png' %}" alt="">
+            <div class="layer">
+                <h3>NEW YORK</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="{% static 'images/washington.png' %}" alt="">
+            <div class="layer">
+                <h3>WASHINGTON</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ----- Campus ends -----  -->
+
+<!-- ----- Facilities starts -----  -->
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+
+    <div class="row">
+        <div class="facilites-col">
+            <img src="{% static 'images/library.png' %}" alt="">
+            <h3>World Class Liberary</h3>
+            <p>You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+        </div>
+
+        <div class="facilites-col">
+            <img src="{% static 'images/basketball.png' %}" alt="">
+            <h3>Largest Play Ground</h3>
+            <p>You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+        </div>
+
+        <div class="facilites-col">
+            <img src="{% static 'images/cafeteria.png' %}" alt="">
+            <h3>Tasty And Healthy Food</h3>
+            <p>You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+        </div>
+    </div>
+</section>
+<!-- ----- Facilities ends -----  -->
+
+<!-- ----- Testimonials start -----  -->
+<section class="testimonials">
+    <h3>What Our Student Says</h3>
+    <p>You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+    <div class="row">
+        <div class="testimonials-col">
+            <img src="{% static 'images/user1.jpg' %}" alt="">
+            <div>
+                <p>Making website is ow one of the easiest thing in the world. You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+                <h3>Fred lee</h3>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+        </div>
+
+        <div class="testimonials-col">
+            <img src="{% static 'images/user2.jpg' %}" alt="">
+            <div>
+                <p>Making website is ow one of the easiest thing in the world. You just needto learn HTML, CSS, JavaScript andyou are good to go.</p>
+                <h3>Kiddo lee</h3>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ----- Testimonials ends -----  -->
+
+<!-- ----- Call to Action start -----  -->
+<section class="cta">
+    <h1>Enroll For Our Various Online Courses <br> Anywhere From The World</h1>
+    <a href="" class="hero-btn">CONTACT US</a>
+</section>
+<!-- ----- Call to Action ends ----- 
+
+----- Footer section starts ----- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS</p>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+    </div>
+    <p>Made with <i class="far fa-heart"></i> Worth Your Time Tutorials</p>
+</section>
+{% endblock %}
+<!-- ----- Footer ends -----  -->
+
+
+
+
+
+<!-- ----- JavaScript for Toggle Menu ----- -->

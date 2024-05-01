@@ -1,0 +1,102 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <!-- ----- Main body  starts -----  -->
+<section class="sub-header">
+    <nav>
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <!-- <li><a href="{ url 'course' }">COURSE</a></li>
+                <li><a href="{ url 'blog' }">BLOG</a></li> -->
+                <li><a href="{% url 'online' %}">ADMISSION FORM</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Our Certificate & OnlinePrograms For 2023</h1>
+</section>
+<!-- ----- Main body ends -----  -->
+
+ 
+<!-- ----- blog content starts -----  -->
+<section class="blog-content">
+    {% for msg in messages %}
+        {{msg}}
+    {% endfor %}
+    <div class="row">
+        <div class="blog-left">
+            <h2>Our Certificate & OnlinePrograms For 2023</h2>
+            <p>Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. </p> 
+           
+
+            <div class="comment-box">
+
+                <h3 style="text-align: center;">Apply Now</h3>
+
+                <form class="comment-form" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="First Name" name="firstname">
+                    <input type="text" placeholder="Last Name" name="lastname">
+                    <input type="email" placeholder="Enter Email" name="email">
+                    <input type="text" placeholder="Tel No." name="phone">
+                    <input type="text" placeholder="Course" name="course">
+                    <button type="submit" class="hero-btn red-btn">Apply</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="blog-right">
+            <h3>Post Categories</h3>
+            <div>
+                <span>Business Analytics</span>
+                <span>12</span>
+            </div>
+            <div>
+                <span>Data Science</span>
+                <span>32</span>
+            </div>
+            <div>
+                <span>Web Developement</span>
+                <span>11</span>
+            </div>
+            <div>
+                <span>Basic Networking</span>
+                <span>42</span>
+            </div>
+            <div>
+                <span>Python Programming</span>
+                <span>45</span>
+            </div>
+            <div>
+                <span>Cyber Security</span>
+                <span>23</span>
+            </div>
+            <div>
+                <span>Data Analysis</span>
+                <span>20</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ----- blog content ends -----  -->
+
+
+   <!-- ----- Footer section starts ----- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS</p>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+    </div>
+    <p>Made with <i class="far fa-heart"></i> </p>
+</section>
+{% endblock %}
